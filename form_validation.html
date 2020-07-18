@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+
+    <script src="form-validate.js"></script>
+</head>
+
+<body>
+    <form onsubmit="return validateForm();">
+        <table>
+            <tr>
+                <td>
+                    <label for="uname">Username: </label>
+                </td>
+                <td>
+                    <input type="text" name="uname" id="uname" onchange="validateUname();" required>
+                </td>
+                <td>
+                    <span id="uname-msg"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>
+                    <input type="text" name="email" id="email" onchange="validateEmail();" required>
+                </td>
+                <td>
+                    <span id="email-msg"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="pass">Password</label>
+                </td>
+                <td>
+                    <input type="password" name="pass" id="pass" onchange="validatePass();" required>
+                </td>
+                <td>
+                    <span id="pass-msg"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="con-pass">Confirm Password</label>
+                </td>
+                <td>
+                    <input type="password" name="con-pass" id="con-pass" onchange="validateConPass();" required>
+                </td>
+                <td>
+                    <span id="con-pass-msg"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="submit" value="submit"></td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
